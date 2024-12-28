@@ -1,21 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    font-family: "Changa One", sans-serif;
+    background: var(--Black);
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+}
+
+:root {
+  --Black: #333333;
+  --White: #f0f0f0;
+  --Gray: #111111;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.blogs {
+  /* margin: 1rem auto; */
+  padding: 1rem 1.5rem;
+}
+
+.blogContent {
+  font-family: "Itim";
+  /* font-weight: 600; */
+  /* font-size: 1.2rem; */
+  letter-spacing: 0.1rem;
+  padding: 0 1rem;
+}
+
+.blogContent h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.blogContent h2 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  margin: 1.2rem 0 0 0;
+}
+
+.blogContent h3 {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  margin: 1.2rem 0 0 0;
+  font-weight: 500;
+}
+
+.blogContent h4 {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  margin: 1.2rem 0 0 0;
+  font-weight: 600;
+}
+
+.blogContent p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0.5rem 0;
+  /* font-weight: bold; */
+}
+
+.blogContent ul li {
+  font-size: 1rem;
+  font-weight: 500;
+  list-style: circle;
+  margin: 0.5rem 2rem;
+}
+
+@media screen and (min-width: 1440px) {
+  .homeLayout {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .nav {
+    width: 100%;
+    /* margin: 1.5rem 0; */
+    padding: 1rem 0;
+    /* border-radius: 0.5rem; */
+    background-color: transparent;
+    border-bottom: 2px solid var(--White);
+  }
+  .sidebar {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .links {
+    font-size: 22px;
+    flex-direction: row;
+  }
+
+  .links .link {
+    margin: 0 1rem;
+  }
+
+  .description,
+  .socials {
+    display: none;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .about {
+    width: 100%;
+    display: flex;
+  }
+
+  .about div {
+    width: 50%;
+  }
+
+  .about .info {
+    margin: 0 1rem 0 2rem;
+  }
+
+  .blogs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    gap: 1.5rem;
+    padding: 1rem 0;
+  }
+
+  .blogContainer {
+    width: 100%;
+  }
+  .main-image {
+    height: 300px;
+  }
+
+  .blogSection {
+    width: 80%;
+    margin: auto;
+  }
+
+  .blogSection .mainImage {
+    margin: 2rem 0 1rem 0;
+  }
+
+  .blogSection .blogContent{
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .homeLayout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  .nav {
+    width: 100%;
+    padding: 1rem;
+    background-color: transparent;
+    border-bottom: 2px solid var(--White);
+    font-size: 2rem;
+  }
+  .sidebar {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .links {
+    font-size: 22px;
+    flex-direction: row;
+  }
+
+  .links .link {
+    margin: 0 1rem;
+  }
+
+  .description,
+  .socials {
+    display: none;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .about .info {
+    padding: 0 1rem;
+  }
+  .blogs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .blog {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+
+  /* .blog .blog-image {
+    width: 100%;
+    height: 100%;
+  } */
+  .blog .blog-image img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .blogs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .blog {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .blog > div {
+    width: 100%;
+  }
+
+  .blog .blog-image {
+    width: 100%;
+    height: 15rem;
+  }
+  .blog .blog-image img {
+    width: 100%;
+    height: 100%;
+  }
 }
