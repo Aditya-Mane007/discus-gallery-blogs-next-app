@@ -1,3 +1,4 @@
+import LandscapeWarning from "@/components/LandscapeWarning";
 import { fetchBlogs } from "@/utils/apis";
 import Head from "next/head";
 import Link from "next/link";
@@ -37,6 +38,8 @@ function Home({ data }) {
         />
         <meta name="twitter:image" content="/default-thumbnail.jpg" />
       </Head>
+      {/* <LandscapeWarning /> */}
+
       <div className="w-full h-auto blogs">
         {blogs.length > 0 ? (
           blogs.map((blog) => (
