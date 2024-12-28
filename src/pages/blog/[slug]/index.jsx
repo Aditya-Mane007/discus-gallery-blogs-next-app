@@ -19,23 +19,21 @@ function index(data) {
         <meta name="description" content={postSummary} />
         <link
           rel="canonical"
-          href={`https://discusgalleryblogs.vercel.app/blog/${slug}/`}
+          href={`https://discusgalleryblogs.vercel.app/blog/${slug}`}
         />
-
-        {/* OG TAGS */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={postSummary} />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content={`https://discusgalleryblogs.vercel.app/blog/${slug}/`}
+          content={`https://discusgalleryblogs.vercel.app/blog/${slug}`}
         />
-        <meta property="og:image" content="Discus Gallery" />
-
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="og:image" content={mainImage} />
+        
+        <meta name="twitter:card" content={mainImage} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={postSummary} />
-        <meta name="twitter:image" content="/default-thumbnail.jpg" />
+        <meta name="twitter:image" content={mainImage} />
       </Head>
       <div className="blogSection px-4 my-4">
         <div className="mainImage h-72 mb-4">
