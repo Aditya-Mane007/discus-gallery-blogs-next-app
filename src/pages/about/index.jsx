@@ -11,6 +11,34 @@ function About() {
           name="description"
           content="Your guide to discus fish care, diet, water tips, and thriving aquarium insights!"
         />
+        <link
+          rel="canonical"
+          href="https://discusgalleryblogs.vercel.app/about"
+        />
+        <meta property="og:title" content="About | Discus Gallery" />
+        <meta
+          property="og:description"
+          content="Your guide to discus fish care, diet, water tips, and thriving aquarium insights!"
+        />
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:url"
+          content="https://discusgalleryblogs.vercel.app/about"
+        />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/dj524uqwc/image/upload/v1735403400/DiscusGalleryBlack_prsott.svg"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Home | Discus Gallery Blogs" />
+        <meta
+          name="twitter:description"
+          content="Your guide to discus fish care, diet, water tips, and thriving aquarium insights!"
+        />
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/dj524uqwc/image/upload/v1735403400/DiscusGalleryBlack_prsott.svg"
+        />
       </Head>
       <div className="w-full h-auto max-h-[100vh] about p-4">
         <div className="w-full h-96 max-[1440px]:h-72 bg-[#444444] rounded-2xl ">

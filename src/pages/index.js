@@ -16,8 +16,6 @@ function Home({ data }) {
           content="Your guide to discus fish care, diet, water tips, and thriving aquarium insights!"
         />
         <link rel="canonical" href="https://discusgalleryblogs.vercel.app/" />
-
-        {/* OG TAGS */}
         <meta property="og:title" content="Home | Discus Gallery Blogs" />
         <meta
           property="og:description"
@@ -28,7 +26,10 @@ function Home({ data }) {
           property="og:url"
           content="https://discusgalleryblogs.vercel.app/"
         />
-        <meta property="og:image" content="Discus Gallery" />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/dj524uqwc/image/upload/v1735403400/DiscusGalleryBlack_prsott.svg"
+        />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Home | Discus Gallery Blogs" />
@@ -36,9 +37,11 @@ function Home({ data }) {
           name="twitter:description"
           content="Your guide to discus fish care, diet, water tips, and thriving aquarium insights!"
         />
-        <meta name="twitter:image" content="/default-thumbnail.jpg" />
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/dj524uqwc/image/upload/v1735403400/DiscusGalleryBlack_prsott.svg"
+        />
       </Head>
-      {/* <LandscapeWarning /> */}
 
       <div className="w-full h-auto blogs">
         {blogs.length > 0 ? (

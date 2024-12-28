@@ -49,7 +49,7 @@ function HomeLayout({ children }) {
         <nav className="max-[768px]:w-[100%] max-lg:w-[40%] w-[30%] h-full max-[1440px]:h-full bg-[#444444] p-8 nav">
           <Sidebar />
         </nav>
-        <main className="max-[768px]:w-[100%] max-lg:w-[60%] w-[70%] h-full max-lg:p-0 bg-[#333333] main">
+        <main className="max-[768px]:w-[100%] max-lg:w-[60%] w-[70%] h-full max-lg:p-0 bg-[#333333] overflow-scroll main">
           {children}
         </main>
       </div>
