@@ -5,7 +5,7 @@ import Image from "next/image";
 import Head from "next/head";
 import { PauseCircleIcon, PlayCircleIcon } from "lucide-react";
 
-function index({ data }) {
+function index(data) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [readbleContent, setReadbleContent] = useState("");
 
