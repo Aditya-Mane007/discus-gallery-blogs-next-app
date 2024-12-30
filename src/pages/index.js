@@ -8,6 +8,7 @@ import { useState } from "react";
 
 function Home({ data }) {
   const blogs = data;
+  console.log(blogs);
   return (
     <>
       <Head>
