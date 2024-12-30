@@ -3,6 +3,7 @@ import { fetchBlogs } from "@/utils/apis";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Script from "next/script";
 import { useState } from "react";
 
 function Home({ data }) {
@@ -46,30 +47,26 @@ function Home({ data }) {
       <div className="w-full h-auto blogs">
         {blogs.length > 0 ? (
           blogs.map((blog) => (
-            <>
-              <Link href={"/blog/" + blog.fieldData.slug} key={blog.id}>
-                <div className="w-full h-72 bg-[#444444] mb-8 rounded-2xl cursor-pointer flex blog">
-                  <div className="w-[50%]">
-                    <img
-                      src={blog.fieldData?.["main-image"].url}
-                      alt=""
-                      className="w-[100%] max-md:h-full h-full object-fill rounded-2xl blog-image"
-                    />
-                  </div>
-                  <div className="w-[50%] my-4 h-auto ">
-                    <div className="max-md:text-xl text-2xl my-2 px-4">
-                      {blog.fieldData.name.slice(0, 60)}...
-                    </div>
-                    <p className="text-text-sm px-4">
-                      {blog.fieldData?.["post-summary"]?.slice(0, 60) || ""}
-                    </p>
-                    <p className="px-4 py-1 font-mono font-bold">
-                      Read More...
-                    </p>
-                  </div>
+            <Link href={"/blog/" + blog.fieldData.slug} key={blog.id}>
+              <div className="w-full h-72 bg-[#444444] mb-8 rounded-2xl cursor-pointer flex blog">
+                <div className="w-[50%]">
+                  <img
+                    src={blog.fieldData?.["main-image"].url}
+                    alt=""
+                    className="w-[100%] max-md:h-full h-full object-fill rounded-2xl blog-image"
+                  />
                 </div>
-              </Link>
-            </>
+                <div className="w-[50%] my-4 h-auto ">
+                  <div className="max-md:text-xl text-2xl my-2 px-4">
+                    {blog.fieldData.name.slice(0, 60)}...
+                  </div>
+                  <p className="text-text-sm px-4">
+                    {blog.fieldData?.["post-summary"]?.slice(0, 60) || ""}
+                  </p>
+                  <p className="px-4 py-1 font-mono font-bold">Read More...</p>
+                </div>
+              </div>
+            </Link>
           ))
         ) : (
           <h1>No Data Available to Show , Please check in sometime</h1>
